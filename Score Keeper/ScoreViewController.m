@@ -33,6 +33,8 @@
     UITextField *nameTextField = [[UITextField alloc] initWithFrame:CGRectMake(10,10, 70, 30)];
     nameTextField.backgroundColor = [UIColor whiteColor];
     nameTextField.borderStyle = UITextBorderStyleRoundedRect;
+    nameTextField.placeholder = @"Name";
+    nameTextField.font = [UIFont boldSystemFontOfSize:10];
     [view addSubview:nameTextField];
     
     UILabel *scoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(105 , 10 , 70, 30)];
@@ -42,7 +44,8 @@
     [view addSubview:scoreLabel];
     
     UIStepper *stepper = [[UIStepper alloc] initWithFrame:CGRectMake(200, 10, 70, 30)];
-    
+    stepper.maximumValue = 100;
+    stepper.minimumValue = -10;
     [view addSubview:stepper];
     
     
